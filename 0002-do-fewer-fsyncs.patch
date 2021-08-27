@@ -15,7 +15,7 @@ diff --git a/libdnf/utils/sqlite3/Sqlite3.cpp b/libdnf/utils/sqlite3/Sqlite3.cpp
 index 0b059cc..366fab6 100644
 --- a/libdnf/utils/sqlite3/Sqlite3.cpp
 +++ b/libdnf/utils/sqlite3/Sqlite3.cpp
-@@ -41,7 +41,7 @@ SQLite3::open()
+@@ -40,7 +40,7 @@ SQLite3::open()
          if (sqlite3_db_readonly(db, "main") == 1)
              exec("PRAGMA locking_mode = NORMAL; PRAGMA foreign_keys = ON;");
          else
