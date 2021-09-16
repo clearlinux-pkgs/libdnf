@@ -4,7 +4,7 @@
 #
 Name     : libdnf
 Version  : 0.63.1
-Release  : 49
+Release  : 50
 URL      : https://github.com/rpm-software-management/libdnf/archive/0.63.1/libdnf-0.63.1.tar.gz
 Source0  : https://github.com/rpm-software-management/libdnf/archive/0.63.1/libdnf-0.63.1.tar.gz
 Summary  : Library providing simplified C and Python API to libsolv
@@ -116,7 +116,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1630022918
+export SOURCE_DATE_EPOCH=1631765388
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -143,7 +143,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 cd clr-build; make test || :
 
 %install
-export SOURCE_DATE_EPOCH=1630022918
+export SOURCE_DATE_EPOCH=1631765388
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libdnf
 cp %{_builddir}/libdnf-0.63.1/COPYING %{buildroot}/usr/share/package-licenses/libdnf/01a6b4bf79aca9b556822601186afab86e8c4fbf
