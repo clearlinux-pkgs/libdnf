@@ -151,6 +151,7 @@ libdnf.so.2:_ZN6libdnf10ConfigMain15system_cachedirEv
 libdnf.so.2:_ZN6libdnf10ConfigMain16config_file_pathEv
 libdnf.so.2:_ZN6libdnf10ConfigMain16disable_excludesEv
 libdnf.so.2:_ZN6libdnf10ConfigMain16module_obsoletesEv
+libdnf.so.2:_ZN6libdnf10ConfigMain17exclude_from_weakEv
 libdnf.so.2:_ZN6libdnf10ConfigMain17history_list_viewB5cxx11Ev
 libdnf.so.2:_ZN6libdnf10ConfigMain17install_weak_depsEv
 libdnf.so.2:_ZN6libdnf10ConfigMain17installonly_limitEv
@@ -183,6 +184,7 @@ libdnf.so.2:_ZN6libdnf10ConfigMain26color_list_installed_olderEv
 libdnf.so.2:_ZN6libdnf10ConfigMain28clean_requirements_on_removeEv
 libdnf.so.2:_ZN6libdnf10ConfigMain28color_list_available_installEv
 libdnf.so.2:_ZN6libdnf10ConfigMain28color_list_available_upgradeEv
+libdnf.so.2:_ZN6libdnf10ConfigMain28exclude_from_weak_autodetectEv
 libdnf.so.2:_ZN6libdnf10ConfigMain29upgrade_group_objects_upgradeEv
 libdnf.so.2:_ZN6libdnf10ConfigMain30color_list_available_downgradeEv
 libdnf.so.2:_ZN6libdnf10ConfigMain30color_list_available_reinstallEv
@@ -238,7 +240,6 @@ libdnf.so.2:_ZN6libdnf10ConfigRepo13fastestmirrorEv
 libdnf.so.2:_ZN6libdnf10ConfigRepo13getMainConfigEv
 libdnf.so.2:_ZN6libdnf10ConfigRepo13repo_gpgcheckEv
 libdnf.so.2:_ZN6libdnf10ConfigRepo13sslclientcertB5cxx11Ev
-libdnf.so.2:_ZN6libdnf10ConfigRepo14failovermethodB5cxx11Ev
 libdnf.so.2:_ZN6libdnf10ConfigRepo14proxy_passwordB5cxx11Ev
 libdnf.so.2:_ZN6libdnf10ConfigRepo14proxy_usernameB5cxx11Ev
 libdnf.so.2:_ZN6libdnf10ConfigRepo15metadata_expireEv
@@ -361,7 +362,6 @@ libdnf.so.2:_ZN6libdnf10filesystem14checksum_checkEPKcS2_S2_
 libdnf.so.2:_ZN6libdnf10filesystem14checksum_valueB5cxx11EPKcS2_
 libdnf.so.2:_ZN6libdnf10filesystem5isDIRERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
 libdnf.so.2:_ZN6libdnf10filesystem6existsERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
-libdnf.so.2:_ZN6libdnf10filesystem8checksumEPKcS2_S2_PbPPc
 libdnf.so.2:_ZN6libdnf10pathExistsEPKc
 libdnf.so.2:_ZN6libdnf10updateFileEPKcS1_
 libdnf.so.2:_ZN6libdnf11AdvisoryPkg7getSackEv
@@ -595,10 +595,12 @@ libdnf.so.2:_ZN6libdnf19DependencyContainer3addEPNS_10DependencyE
 libdnf.so.2:_ZN6libdnf19DependencyContainer3addEi
 libdnf.so.2:_ZN6libdnf19DependencyContainer6extendEPS0_
 libdnf.so.2:_ZN6libdnf19DependencyContainer9addReldepEPKc
+libdnf.so.2:_ZN6libdnf19DependencyContainerC1EOS0_
 libdnf.so.2:_ZN6libdnf19DependencyContainerC1EP8_DnfSack
 libdnf.so.2:_ZN6libdnf19DependencyContainerC1EP8_DnfSackO7s_Queue
 libdnf.so.2:_ZN6libdnf19DependencyContainerC1EP8_DnfSackRK7s_Queue
 libdnf.so.2:_ZN6libdnf19DependencyContainerC1ERKS0_
+libdnf.so.2:_ZN6libdnf19DependencyContainerC2EOS0_
 libdnf.so.2:_ZN6libdnf19DependencyContainerC2EP8_DnfSack
 libdnf.so.2:_ZN6libdnf19DependencyContainerC2EP8_DnfSackO7s_Queue
 libdnf.so.2:_ZN6libdnf19DependencyContainerC2EP8_DnfSackRK7s_Queue
@@ -606,6 +608,7 @@ libdnf.so.2:_ZN6libdnf19DependencyContainerC2ERKS0_
 libdnf.so.2:_ZN6libdnf19DependencyContainerD1Ev
 libdnf.so.2:_ZN6libdnf19DependencyContainerD2Ev
 libdnf.so.2:_ZN6libdnf19DependencyContaineraSEOS0_
+libdnf.so.2:_ZN6libdnf19DependencyContaineraSERKS0_
 libdnf.so.2:_ZN6libdnf19TransactionItemBase13getActionNameB5cxx11Ev
 libdnf.so.2:_ZN6libdnf19TransactionItemBase14getActionShortB5cxx11Ev
 libdnf.so.2:_ZN6libdnf19getGlobalMainConfigEb
@@ -641,6 +644,7 @@ libdnf.so.2:_ZN6libdnf22ModulePackageContainer15getLatestModuleESt6vectorIPNS_13
 libdnf.so.2:_ZN6libdnf22ModulePackageContainer15getResetModulesB5cxx11Ev
 libdnf.so.2:_ZN6libdnf22ModulePackageContainer15getResetStreamsB5cxx11Ev
 libdnf.so.2:_ZN6libdnf22ModulePackageContainer16getEnabledStreamERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+libdnf.so.2:_ZN6libdnf22ModulePackageContainer16getLatestModulesESt6vectorIPNS_13ModulePackageESaIS3_EEb
 libdnf.so.2:_ZN6libdnf22ModulePackageContainer16getModulePackageEi
 libdnf.so.2:_ZN6libdnf22ModulePackageContainer16loadFailSafeDataEv
 libdnf.so.2:_ZN6libdnf22ModulePackageContainer17getEnabledStreamsB5cxx11Ev
@@ -762,11 +766,15 @@ libdnf.so.2:_ZN6libdnf4Goal14listReinstallsEv
 libdnf.so.2:_ZN6libdnf4Goal14writeDebugdataEPKc
 libdnf.so.2:_ZN6libdnf4Goal16listConflictPkgsE15DnfPackageState
 libdnf.so.2:_ZN6libdnf4Goal20describeProblemRulesB5cxx11Ejb
+libdnf.so.2:_ZN6libdnf4Goal21add_exclude_from_weakEP11_DnfPackage
+libdnf.so.2:_ZN6libdnf4Goal21add_exclude_from_weakERKNS_10PackageSetE
 libdnf.so.2:_ZN6libdnf4Goal21formatAllProblemRulesERKSt6vectorIS1_INSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS7_EESaIS9_EE
 libdnf.so.2:_ZN6libdnf4Goal22listObsoletedByPackageEP11_DnfPackage
 libdnf.so.2:_ZN6libdnf4Goal23describeAllProblemRulesB5cxx11Eb
+libdnf.so.2:_ZN6libdnf4Goal23reset_exclude_from_weakEv
 libdnf.so.2:_ZN6libdnf4Goal24listBrokenDependencyPkgsE15DnfPackageState
 libdnf.so.2:_ZN6libdnf4Goal26set_protect_running_kernelEb
+libdnf.so.2:_ZN6libdnf4Goal28exclude_from_weak_autodetectEv
 libdnf.so.2:_ZN6libdnf4Goal3runE14DnfGoalActions
 libdnf.so.2:_ZN6libdnf4Goal4Impl10initSolverEv
 libdnf.so.2:_ZN6libdnf4Goal4Impl11listResultsEii
@@ -1160,6 +1168,7 @@ libdnf.so.2:_ZNK6libdnf13ModulePackage16getStaticContextEv
 libdnf.so.2:_ZNK6libdnf13ModulePackage17getDefaultProfileEv
 libdnf.so.2:_ZNK6libdnf13ModulePackage17getFullIdentifierB5cxx11Ev
 libdnf.so.2:_ZNK6libdnf13ModulePackage18createDependenciesEP10s_Solvable
+libdnf.so.2:_ZNK6libdnf13ModulePackage20getDemodularizedRpmsB5cxx11Ev
 libdnf.so.2:_ZNK6libdnf13ModulePackage20getNameStreamVersionB5cxx11Ev
 libdnf.so.2:_ZNK6libdnf13ModulePackage21getModuleDependenciesEv
 libdnf.so.2:_ZNK6libdnf13ModulePackage7getArchB5cxx11Ev
@@ -1400,6 +1409,7 @@ libdnf.so.2:dnf_context_invalidate
 libdnf.so.2:dnf_context_invalidate_full
 libdnf.so.2:dnf_context_is_set_config_file_path
 libdnf.so.2:dnf_context_module_disable
+libdnf.so.2:dnf_context_module_disable_all
 libdnf.so.2:dnf_context_module_enable
 libdnf.so.2:dnf_context_module_install
 libdnf.so.2:dnf_context_module_reset
@@ -1562,6 +1572,9 @@ libdnf.so.2:dnf_packageset_new
 libdnf.so.2:dnf_realpath
 libdnf.so.2:dnf_reldep_free
 libdnf.so.2:dnf_reldep_get_id
+libdnf.so.2:dnf_reldep_get_name
+libdnf.so.2:dnf_reldep_get_relation
+libdnf.so.2:dnf_reldep_get_version
 libdnf.so.2:dnf_reldep_list_add
 libdnf.so.2:dnf_reldep_list_count
 libdnf.so.2:dnf_reldep_list_extend
