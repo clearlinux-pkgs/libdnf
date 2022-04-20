@@ -4,7 +4,7 @@
 #
 Name     : libdnf
 Version  : 0.65.0
-Release  : 56
+Release  : 57
 URL      : https://github.com/rpm-software-management/libdnf/archive/0.65.0/libdnf-0.65.0.tar.gz
 Source0  : https://github.com/rpm-software-management/libdnf/archive/0.65.0/libdnf-0.65.0.tar.gz
 Summary  : Library providing simplified C and Python API to libsolv
@@ -23,7 +23,6 @@ BuildRequires : glibc-bin
 BuildRequires : gpgme-dev
 BuildRequires : gtk-doc-data
 BuildRequires : libassuan-dev
-BuildRequires : nose
 BuildRequires : openssl-dev
 BuildRequires : perl
 BuildRequires : pkg-config
@@ -115,7 +114,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1648078583
+export SOURCE_DATE_EPOCH=1650498766
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -142,7 +141,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 cd clr-build; make test || :
 
 %install
-export SOURCE_DATE_EPOCH=1648078583
+export SOURCE_DATE_EPOCH=1650498766
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libdnf
 cp %{_builddir}/libdnf-0.65.0/COPYING %{buildroot}/usr/share/package-licenses/libdnf/01a6b4bf79aca9b556822601186afab86e8c4fbf

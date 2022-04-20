@@ -6,5 +6,3 @@ python3-dev
 swig
 # libassuan-lib is a dep of gpgme, but the -dev package is also needed
 libassuan-dev
-# for the test suite
-nose
