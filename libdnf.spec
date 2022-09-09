@@ -4,18 +4,17 @@
 #
 Name     : libdnf
 Version  : 0.65.0
-Release  : 57
+Release  : 58
 URL      : https://github.com/rpm-software-management/libdnf/archive/0.65.0/libdnf-0.65.0.tar.gz
 Source0  : https://github.com/rpm-software-management/libdnf/archive/0.65.0/libdnf-0.65.0.tar.gz
 Summary  : Library providing simplified C and Python API to libsolv
 Group    : Development/Tools
-License  : LGPL-2.1 LGPL-2.1+
+License  : LGPL-2.0+ LGPL-2.1
 Requires: libdnf-lib = %{version}-%{release}
 Requires: libdnf-license = %{version}-%{release}
 Requires: libdnf-locales = %{version}-%{release}
 Requires: libdnf-python = %{version}-%{release}
 Requires: libdnf-python3 = %{version}-%{release}
-BuildRequires : Sphinx
 BuildRequires : buildreq-cmake
 BuildRequires : gettext-dev
 BuildRequires : git
@@ -40,6 +39,7 @@ BuildRequires : pkgconfig(modulemd-2.0)
 BuildRequires : pkgconfig(rpm)
 BuildRequires : pkgconfig(smartcols)
 BuildRequires : pkgconfig(sqlite3)
+BuildRequires : pypi-sphinx
 BuildRequires : python3
 BuildRequires : python3-dev
 BuildRequires : swig
@@ -114,7 +114,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1650498766
+export SOURCE_DATE_EPOCH=1662754236
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -141,10 +141,10 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 cd clr-build; make test || :
 
 %install
-export SOURCE_DATE_EPOCH=1650498766
+export SOURCE_DATE_EPOCH=1662754236
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libdnf
-cp %{_builddir}/libdnf-0.65.0/COPYING %{buildroot}/usr/share/package-licenses/libdnf/01a6b4bf79aca9b556822601186afab86e8c4fbf
+cp %{_builddir}/libdnf-%{version}/COPYING %{buildroot}/usr/share/package-licenses/libdnf/01a6b4bf79aca9b556822601186afab86e8c4fbf
 pushd clr-build
 %make_install
 popd
