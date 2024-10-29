@@ -7,7 +7,7 @@
 #
 Name     : libdnf
 Version  : 0.73.2
-Release  : 62
+Release  : 63
 URL      : https://github.com/rpm-software-management/libdnf/archive/0.73.2/libdnf-0.73.2.tar.gz
 Source0  : https://github.com/rpm-software-management/libdnf/archive/0.73.2/libdnf-0.73.2.tar.gz
 Summary  : Library providing simplified C and Python API to libsolv
